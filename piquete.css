@@ -1,100 +1,109 @@
-h1{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 70px;
-    margin: 0px;
-    padding: 0px;
-    color:#252b2e;
-    
-}
-
-h3{
+h1 {
   font-family: 'Courier New', Courier, monospace;
-  color:#252b2e;
+  font-size: 70px;
+  margin: 0px;
+  padding: 0px;
+  color: #252b2e;
+
 }
 
-a{
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #252b2e;
+  margin: 0px
+}
+
+a {
   text-decoration: none;
 }
 
-h4{
+h4 {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
-  color:#14171a;
+  color: #14171a;
 }
 
-p{
+p {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
-  color:#252b2e;
+  color: #252b2e;
 
 }
 
 
-header{
-    margin: 0;
-    padding:0;
-    background-color:#EF3D59  ;
-    
-    
+header {
+  margin: 0;
+  padding: 0;
+  background-color: #EF3D59;
+
+
 }
 
-body{
-  margin:0;
-  padding:0;
-  background-color: #EFC958 ;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EFC958;
 }
 
-td{
+td {
   text-align: center;
-  background-color: #4AB19D ;
+  background-color: #4AB19D;
   border-color: #4AB19D;
   margin: 12px 12px 12px 12px;
   padding: 12px 12px 12px 12px;
 }
 
-table{
+table {
   width: 100%;
-  background-color:#4AB19D;
+  background-color: #4AB19D;
   border-collapse: separate;
   border-spacing: 10px;
   border-collapse: expression('separate', cellSpacing='10px');
   border-color: #4AB19D;
 }
 
-ul{
+.menu {
+  background-color: #4AB19D;
+}
+
+.objet-menu {
+  display: inline-block;
+  margin-left: 8%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+ul {
   background-color: #344E5C;
-  list-style-type:none;
-  height: 100%; 
+  list-style-type: none;
+  height: 100%;
   width: 10%;
   position: fixed;
   margin-top: 0;
 
 }
 
-.logo{
+.logo {
   width: 58px;
   height: 58px;
 }
 
-.haut-de-la-page{
+.haut-de-la-page {
   background-color: #EF3D59;
 }
 
-.img-haut-de-page{
+.img-haut-de-page {
   display: inline-block;
   margin-right: 42%;
 }
 
-.titre{
+.titre {
   display: inline-block;
   margin: 0px;
   padding: 0px;
 }
 
-.contenu{
+.contenu {
   text-align: center;
 }
-
-
-
