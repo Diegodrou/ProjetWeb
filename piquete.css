@@ -21,6 +21,7 @@ h4 {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   color: #14171a;
+  margin: 0%
 }
 
 p {
@@ -72,6 +73,20 @@ table {
   margin-left: 8%;
   margin-top: 1%;
   margin-bottom: 1%;
+}
+
+.sous-menu {
+  background-color: #344E5C;
+  width: 12%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+
+}
+
+.objet-sous-menu {
+  margin-top: 10%;
+  margin-left: 18%
 }
 
 ul {
