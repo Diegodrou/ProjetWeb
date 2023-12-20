@@ -153,6 +153,12 @@ input[type=text]:focus {
   text-align: center;
 }
 
+.displayUser {
+  display: inline-block;
+  margin-left: 30%;
+  padding: 0px;
+}
+
 button {
   border: 2px solid black;
   height: 60px;

@@ -1,12 +1,17 @@
 from flask import*
 from user import User
+import json
+
+jsonData = open("comptes.json") 
+comptes:list[User] = json.load(jsonData)
+jsonData.close()
 
 app = Flask(__name__)
 
 @app.route('/',methods=["GET"])
 def index():
  
-    return render_template("accueil.html")
+    return render_template("accueil.html",prenom="")
 
 @app.route('/sign-up',methods=["GET"])
 def login():
@@ -17,8 +22,14 @@ def loginForm():
     if request.method == "POST":
         prenom = request.form.get("prenom")
         psw = request.form.get("password")
-        nouveauUser = User(prenom,psw)
-        return redirect("/")        
+        nouveauUser = User(prenom,psw) 
+        comptes.append(nouveauUser)
+
+        
+
+        
+
+        return render_template("accueil.html",prenom=prenom)    
 
 
 if __name__ == '__main__':
