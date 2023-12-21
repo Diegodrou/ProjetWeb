@@ -2,9 +2,13 @@ from flask import*
 from user import User
 import json
 
-jsonData = open("comptes.json") 
-comptes:list[User] = json.load(jsonData)
+jsonPsw = open("pswords.json")
+jsonData = open("comptes.json")
+ 
+pswToUser:list[dict[str,str]] = json.load(jsonPsw)
+comptes:list = json.load(jsonData)
 jsonData.close()
+jsonPsw.close()
 
 app = Flask(__name__)
 
@@ -18,13 +22,17 @@ def login():
     return render_template("sign-up.html")
 
 @app.route('/form-sign-up',methods=["POST"])
-def loginForm():
+def signUpForm():
     if request.method == "POST":
         prenom = request.form.get("prenom")
         psw = request.form.get("password")
-        nouveauUser = User(prenom,psw) 
+        pswToUser.append({psw:prenom})
+        nouveauUser = User(prenom).serialize() 
         comptes.append(nouveauUser)
-
+        with open("comptes.json","w") as output:
+            json.dump(comptes,output)
+        with open("pswords.json","w") as output:
+            json.dump(pswToUser,output)
         
 
         
