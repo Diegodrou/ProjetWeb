@@ -17,14 +17,20 @@
         </div>
     </div>
     <div class="contenu">
-        <form action="/form-sign-up" method="POST">
-            <h1>Saisis ton prénom</h1>
+        <form action="/form-login" method="POST">
+            <h1>Prénom</h1>
             <input type="text" name="prenom">
-            <h1>Saisis ton mot de passe</h1>
+            {% if message == "Le compte n'existe pas" %}
+            <p class="error">{{message}}</p>
+            {%endif%}
+            <h1>Mot de passe</h1>
             <input type="text" name="password">
+            {% if message == "Mot de passe incorrecte" %}
+            <p class="error">{{message}}</p>
+            {%endif%}
             <br>
             <br>
-            <button type="submit">Créer compte</button>
+            <button type="submit">Login</button>
         </form>
 
     </div>
