@@ -65,13 +65,18 @@
             <h4>Bienvenue</h4>
         </div>
     </div>
-    <div class="contenu">
+    <div id="content" class="contenu">
         <h1>Bienvenue {{prenom}}</h1>
-        {%for i in range(nlines)%}
-        <p>{{txt[i]}}</p>
-        {%endfor%}
     </div>
 
 </body>
+<div id="data" data-list="{{txt}}"></div>
+<script>
+    var txt = JSON.parse(document.getElementById("data").dataset.list);
+    for (let i = 0; i < txt.length; i++) {
+        document.getElementById("content").innerHTML += "<p>" + txt[i] + "</p>"
+
+    }
+</script>
 
 </html>

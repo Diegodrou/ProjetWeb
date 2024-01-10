@@ -8,6 +8,7 @@ jsonData = open("comptes.json")
 accueil_file = open("acceuil.txt","r")
 
 accueil_txt = accueil_file.readlines()
+accueil_txt_js = json.dumps(accueil_txt)
  
 pswToUser:list[dict[str,str]] = json.load(jsonPsw)
 comptes:list = json.load(jsonData)
@@ -28,7 +29,7 @@ app = Flask(__name__)
 @app.route('/',methods=["GET"])
 def index():
  
-    return render_template("accueil.html",prenom="",txt = accueil_txt,nlines = len(accueil_txt))
+    return render_template("accueil.html",prenom="",txt = accueil_txt_js,nlines = len(accueil_txt))
 
 @app.route('/sign-up',methods=["GET"])
 def signUp():
