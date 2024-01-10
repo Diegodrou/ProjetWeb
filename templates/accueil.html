@@ -67,7 +67,9 @@
     </div>
     <div class="contenu">
         <h1>Bienvenue {{prenom}}</h1>
-        <p>Ce site contient le contenu du cours du module WEB.</p>
+        {%for i in range(nlines)%}
+        <p>{{txt[i]}}</p>
+        {%endfor%}
     </div>
 
 </body>
