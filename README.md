@@ -2,7 +2,7 @@
 
 ## Description
 
-Ce projet est un site web éducatif créé pour un cours de deuxième année sur le développement web. Il utilise **Flask (Python)**, **HTML** et **CSS**.
+Ce projet est un site web éducatif créé pour un cours de deuxième année de licence  sur le développement web. Il utilise **Flask (Python)**, **HTML** et **CSS**.
 
 Le site présente plusieurs concepts de base du développement web à travers des pages statiques, mais il est **encore incomplet**.
 
