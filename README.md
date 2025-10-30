@@ -50,7 +50,7 @@ http://127.0.0.1:5000
 
 * Pages HTML créées avec du contenu de base.
 * CSS simple appliqué.
-* Navigation entre les pages icomplet.
+* Navigation entre les pages incomplet.
 * Contenu incomplet, certaines explications et exemples manquent.
 
 ## À faire
